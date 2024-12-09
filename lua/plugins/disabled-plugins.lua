@@ -1,10 +1,14 @@
 return {
   {
-    "echasnovski/mini.pairs",
+    'folke/which-key.nvim',
     enabled = false,
   },
   {
-    "mfussenegger/nvim-dap",
+    'echasnovski/mini.pairs',
+    enabled = false,
+  },
+  {
+    'mfussenegger/nvim-dap',
     enabled = false,
   },
 }
