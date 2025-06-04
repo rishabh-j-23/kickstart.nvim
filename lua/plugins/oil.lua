@@ -16,7 +16,6 @@ return {
       -- Window-local options to use for preview window buffers
       win_options = {},
     },
-    ke,
   },
   -- Optional dependencies
   dependencies = { { 'echasnovski/mini.icons', opts = {} } },

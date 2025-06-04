@@ -1,3 +1,7 @@
+local gopls = require 'lspconfig.configs.gopls'
+local bashls = require 'lspconfig.configs.bashls'
+local pyright = require 'lspconfig.configs.pyright'
+local hydra_lsp = require 'lspconfig.configs.hydra_lsp'
 return {
   -- Main LSP Configuration
   'neovim/nvim-lspconfig',
@@ -198,6 +202,13 @@ return {
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
     require('mason-lspconfig').setup {
+      ensure_installed = {
+        'gopls',
+        'bashls',
+        'pyright',
+        'hydra_lsp',
+      },
+      automatic_enable = true,
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}

@@ -21,6 +21,10 @@ vim.keymap.set('n', '<right>', '')
 vim.keymap.set('n', '<up>', '')
 vim.keymap.set('n', '<down>', '')
 
+-- Keep the screen centered when moving up and down
+vim.keymap.set('n', 'j', "v:count == 0 ? 'jzz' : 'j'", { expr = true, silent = true })
+vim.keymap.set('n', 'k', "v:count == 0 ? 'kzz' : 'k'", { expr = true, silent = true })
+
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
@@ -29,6 +33,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<leader>x', '<CMD>source %<CR>', { desc = 'Source file' })
 vim.keymap.set('n', '<leader>l', '<CMD>Lazy<CR>', { desc = 'Lazy' })
 vim.keymap.set('n', 'C-d', 'C-dzz', { desc = 'PG DN and center' })
+vim.keymap.set('n', 'C-u', 'C-uzz', { desc = 'PG UP and center' })
 -- Better up/down
 vim.keymap.set({ 'n', 'x' }, 'j', "v:count == 0 ? 'gjzz' : 'jzz'", { desc = 'Down', expr = true, silent = true })
 -- vim.keymap.set({ 'n', 'x' }, '<Down>', "v:count == 0 ? 'gj' : 'j'", { desc = 'Down', expr = true, silent = true })
@@ -53,7 +58,7 @@ vim.keymap.set({ 'n', 'x' }, 'k', "v:count == 0 ? 'gk' : 'k'", { desc = 'Up', ex
 vim.keymap.set({ 'n', 'x' }, '<Up>', "v:count == 0 ? 'gk' : 'k'", { desc = 'Up', expr = true, silent = true })
 
 -- Move to window using the <ctrl> hjkl keys
-vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Go to Left Window'})
+vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Go to Left Window' })
 vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Go to Lower Window' })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Go to Upper Window' })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Go to Right Window' })
@@ -169,8 +174,8 @@ vim.keymap.set('t', '<c-_>', '<cmd>close<cr>', { desc = 'which_key_ignore' })
 
 -- windows
 vim.keymap.set('n', '<leader>-', '<C-W>s', { desc = 'Split Window Below' })
-vim.keymap.set('n', '<leader>|', '<C-W>v', { desc = 'Split Window Right'  })
-vim.keymap.set('n', '<leader>wd', '<C-W>c', { desc = 'Delete Window'})
+vim.keymap.set('n', '<leader>|', '<C-W>v', { desc = 'Split Window Right' })
+vim.keymap.set('n', '<leader>wd', '<C-W>c', { desc = 'Delete Window' })
 
 -- tabs
 vim.keymap.set('n', '<leader><tab>l', '<cmd>tablast<cr>', { desc = 'Last Tab' })
