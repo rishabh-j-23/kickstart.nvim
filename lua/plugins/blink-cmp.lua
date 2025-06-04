@@ -126,7 +126,7 @@ return { -- Autocompletion
       documentation = { auto_show = false, auto_show_delay_ms = 500 },
       menu = {
         draw = {
-          columns = { { 'item_idx' }, { 'kind_icon' }, { 'label', 'label_description', gap = 1 } },
+          columns = { { 'item_idx' }, { 'kind_icon' }, { 'label', 'label_description', gap = 0.4 } },
           components = {
             item_idx = {
               text = function(ctx)
