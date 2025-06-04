@@ -110,10 +110,10 @@ return { -- Autocompletion
         end,
       },
     },
-    cmdline = {
-      keymap = { preset = 'inherit' },
-      completion = { menu = { auto_show = true } },
-    },
+    -- cmdline = {
+    --   keymap = { preset = 'inherit' },
+    --   completion = { menu = { auto_show = true } },
+    -- },
     appearance = {
       -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
       -- Adjusts spacing to ensure icons are aligned
