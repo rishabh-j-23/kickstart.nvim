@@ -1,14 +1,10 @@
-local gopls = require 'lspconfig.configs.gopls'
-local bashls = require 'lspconfig.configs.bashls'
-local pyright = require 'lspconfig.configs.pyright'
-local hydra_lsp = require 'lspconfig.configs.hydra_lsp'
 return {
   -- Main LSP Configuration
   'neovim/nvim-lspconfig',
   dependencies = {
     -- Automatically install LSPs and related tools to stdpath for Neovim
-    { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
-    'williamboman/mason-lspconfig.nvim',
+    { 'mason-org/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
+    'mason-org/mason-lspconfig.nvim',
     'WhoIsSethDaniel/mason-tool-installer.nvim',
 
     -- Useful status updates for LSP.

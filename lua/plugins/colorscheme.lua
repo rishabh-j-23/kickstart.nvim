@@ -4,7 +4,7 @@ return {
     'folke/tokyonight.nvim',
     lazy = true,
     priority = 1000,
-    enabled = true,
+    enabled = false,
     opts = { style = 'night' },
   },
   {
@@ -28,6 +28,7 @@ return {
         },
       }
       vim.cmd 'colorscheme carbonfox'
+      vim.api.nvim_set_hl(0, 'Visual', { bg = '#285577' })
     end,
   },
 }
