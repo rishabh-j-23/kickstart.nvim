@@ -104,6 +104,7 @@ return {
           if vim.fn.has 'nvim-0.11' == 1 then
             return client:supports_method(method, bufnr)
           else
+            ---@diagnostic disable-next-line: param-type-mismatch
             return client.supports_method(method, { bufnr = bufnr })
           end
         end
@@ -239,6 +240,9 @@ return {
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format Lua code
+      'jdtls',
+      'gopls',
+      'pyright',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
