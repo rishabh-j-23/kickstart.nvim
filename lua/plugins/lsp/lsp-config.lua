@@ -82,9 +82,9 @@ return {
         --  For example, in C this would take you to the header.
         map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
-        -- Fuzzy find all the symbols in your current document.
-        --  Symbols are things like variables, functions, types, etc.
-        map('gO', require('snacks').picker.lsp_document_symbols, 'Open Document Symbols')
+         -- Fuzzy find all the symbols in your current document.
+         --  Symbols are things like variables, functions, types, etc.
+         map('gO', require('snacks').picker.lsp_symbols, 'Open Document Symbols')
 
         -- Fuzzy find all the symbols in your current workspace.
         --  Similar to document symbols, except searches over your entire project.
